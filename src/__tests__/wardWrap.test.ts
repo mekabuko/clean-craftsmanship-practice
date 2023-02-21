@@ -44,41 +44,43 @@ test('wrap space', () => {
 })
 
 test("wrap Gettysburg address 15", () => {
-    assertWrapped(GETTYSBURG_ADDRESS, 
-    15, 
-    /*
-    -123456789012345--
-    */
-    "Four score and¥n" +
-    "seven years ago¥n" +
-    "our fathers¥n" +
-    "brought forth¥n" +
-    "on this¥n" +
-    "continent, a¥n" +
-    "new nation,¥n" +
-    "conceived in¥n" +
-    "Liberty, and¥n" +
-    "dedicated to¥n" +
-    "the proposition¥n" +
-    "that all men¥n" +
-    "are created¥n" +
-    "equal"
+    assertWrapped(
+        GETTYSBURG_ADDRESS, 
+        15, 
+        /*
+        -123456789012345--
+        */
+        "Four score and¥n" +
+        "seven years ago¥n" +
+        "our fathers¥n" +
+        "brought forth¥n" +
+        "on this¥n" +
+        "continent, a¥n" +
+        "new nation,¥n" +
+        "conceived in¥n" +
+        "Liberty, and¥n" +
+        "dedicated to¥n" +
+        "the proposition¥n" +
+        "that all men¥n" +
+        "are created¥n" +
+        "equal"
     )
 })
 
 
 test("wrap Gettysburg address 30", () => {
-    assertWrapped(GETTYSBURG_ADDRESS, 
-    30, 
-    /*
-    -123456789012345678901234567890--
-    */
-    "Four score and seven years ago¥n" +
-    "our fathers brought forth on¥n" +
-    "this continent, a new nation,¥n" +
-    "conceived in Liberty, and¥n"+
-    "dedicated to the proposition¥n"+
-    "that all men are created equal"
+    assertWrapped(
+        GETTYSBURG_ADDRESS, 
+        30, 
+        /*
+        -123456789012345678901234567890--
+        */
+        "Four score and seven years ago¥n" +
+        "our fathers brought forth on¥n" +
+        "this continent, a new nation,¥n" +
+        "conceived in Liberty, and¥n"+
+        "dedicated to the proposition¥n"+
+        "that all men are created equal"
     )
 })
 
@@ -92,7 +94,9 @@ test('wrap ¥n(old)', () => {
 })
 
 test("wrap Gettysburg address (old)", () => {
-    assertWrapped("Four score and seven years ago our", 
-    7, 
-    "Four¥nscore¥nand¥nseven¥nyears¥nago our")
+    assertWrapped(
+        "Four score and seven years ago our", 
+        7, 
+        "Four¥nscore¥nand¥nseven¥nyears¥nago our"
+    )
 })
